@@ -1,0 +1,13 @@
+[user]
+	name = epinault-ttc
+	email = epinault@talenttech.com
+[color]
+	ui = auto
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+	br = branch
+	
+[push]
+	default = current
