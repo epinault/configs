@@ -8,6 +8,10 @@
 	st = status
 	co = checkout
 	br = branch
-	
+        st = status
+        l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+        lol = log --pretty=oneline --abbrev-commit --graph --decorate
+        current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+
 [push]
 	default = current
