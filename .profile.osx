@@ -19,7 +19,7 @@ function show_smiley
 }
 
 
-export PS1='\u@\h \w $(show_smiley) \[\033[01;31m\]$(rvm-prompt)\[\033[01;32m\]$(__git_ps1 " (%s)")\[\033[00m\]  
+export PS1='\u \w $(show_smiley) \[\033[01;31m\]$(rvm-prompt)\[\033[01;32m\]$(__git_ps1 " (%s)")\[\033[00m\]  
 % '
 # default editor
 export EDITOR='subl -w'
