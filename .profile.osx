@@ -24,6 +24,10 @@ export PS1='\u \w $(show_smiley) \[\033[01;31m\]$(rvm-prompt)\[\033[01;32m\]$(__
 # default editor
 export EDITOR='subl -w'
 
+# better less :)
+export LESS='-i-P%f (%i/%m) Line %lt/%L'
+
+
 # rvm crap
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
