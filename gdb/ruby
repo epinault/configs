@@ -226,31 +226,31 @@ define rp
   end
 end
 document rp
-ruby���Ȥ߹��ߥ��֥������Ȥ�ɽ������
+ruby¤ÎÁÈ¤ß¹þ¤ß¥ª¥Ö¥¸¥§¥¯¥È¤òÉ½¼¨¤¹¤ë
 end
 
 define nd_type
   print nodetype($arg0)
 end
 document nd_type
-ruby node �η���ɽ��
+ruby node ¤Î·¿¤òÉ½¼¨
 end
 
 define nd_file
   print ((NODE*)$arg0)->nd_file
 end
 document nd_file
-node �Υ������ե�����̾��ɽ��
+node ¤Î¥½¡¼¥¹¥Õ¥¡¥¤¥ëÌ¾¤òÉ½¼¨
 end
 
 define nd_line
   print nodeline($arg0)
 end
 document nd_line
-node �ι��ֹ��ɽ��
+node ¤Î¹ÔÈÖ¹æ¤òÉ½¼¨
 end
 
-# ruby node �Υ��Ф�ɽ��
+# ruby node ¤Î¥á¥ó¥Ð¤òÉ½¼¨
 
 define nd_head
   print "u1.node"

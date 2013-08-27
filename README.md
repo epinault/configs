@@ -1,35 +1,18 @@
-ttach to the process
-Attach to the process, load the ruby helpers, and redirect stdout:
+## Emmanuel Pinault's (@epinault) dotfiles
 
-$ gdb /usr/bin/ruby 21170
-The first argument to gdb should be the full path to the ruby executable that is running your script.
+A set of dotfiles that I try to maintain based on need and what I have found from other github
+users sharing their dotfiles or screencast/blogs. I did not keep track of who to credit but I will not get 
+any credits for the structure or the content of the files beside the link.sh
 
-Start your debug session
-From above, you should see a bunch of output like this:
+### Credits
+Credit for the basic organization of these files goes to [Zach
+Holman](https://github.com/holman) and [Chris Kelly](https://github.com/amateurhuman) for starting me into the right direction
 
-...
-Loaded symbols for /srv/ruby/1.8.6/lib/ruby/1.8/i686-linux/nkf.so
-0xbfffe402 in +kernel_vsyscall ()
-And then you’ll wind up at:
+### Symlinks
 
-(gdb)
-First things first, load up the ruby helpers:
+Everything with a .symlink file extension ends up as a dotfile symlink in my $HOME
+directory (usually with the same name proceeded with a dot), for example
+rspec.symlink will be symlinked to $HOME/.rspec. 
 
-(gdb) session-ruby
-Then, redirect stdout to a file, so we can capture the output for later:
-
-(gdb) redirect_stdout
-Open up a second terminal, and you can watch the output from your debug session:
-
-$ tail -f /tmp/ruby-debug.PID
-Where PID above is equal to the PID you attached to with gdb.
-
-Now that you are watching, flip back to your gdb session and…
-
-Get some data
-Now you can retrieve some data:
-
-(gdb) eval "caller"
-(gdb) rb_object_counts
-(gdb) eval "total = \[\[ObjectSpace\]\].each_object(Array)\{\|x\| puts '---'; p x \}; puts \\"---\\nTotal Arrays: \#{total}\\""
+I have a small script called link.sh that helps me creating the link on a per tool basis.
 

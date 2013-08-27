@@ -1,0 +1,39 @@
+# shortcut to this dotfiles path is $CONFIG_HOME
+export CONFIG_HOME=$HOME/configs
+
+# source every aliases.sh file in this rep
+for config_file in $(find ~/Projects/configs -name "aliases.sh") 
+do
+	echo $config_file
+	source $config_file
+done
+
+# turning color mode on
+export CLICOLOR=1
+export GREP_OPTIONS='--color=auto'
+
+# load git special function
+source ~/bin/git-completion.bash
+
+export PATH=$HOME/bin:$PATH
+
+function show_smiley
+{
+    ret_val=$?
+    if [ "$ret_val" = "0" ]
+    then
+        echo -e "\x1B[00;32m☺\x1B[00m"
+    else
+        echo -e "\x1B[00;31m☹\x1B[00m"
+    fi
+}
+
+
+export PS1='\u \w $(show_smiley) \[\033[01;31m\]$(rvm-prompt)\[\033[01;32m\]$(__git_ps1 " (%s)")\[\033[00m\]  
+% '
+# default editor
+export EDITOR='subl -w'
+
+# better less :)
+export LESS='-i-P%f (%i/%m) Line %lt/%L'
+
