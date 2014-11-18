@@ -26,5 +26,10 @@ function show_smiley
 }
 
 
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby 2.1
+
 export PS1='\u \w $(show_smiley) \[\033[01;31m\]$(ruby -e "puts RUBY_VERSION + %q{p} + RUBY_PATCHLEVEL.to_s")\[\033[01;32m\]$(__git_ps1 " (%s)")\[\033[00m\]  
 % '
+
