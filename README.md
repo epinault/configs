@@ -16,3 +16,7 @@ rspec.symlink will be symlinked to $HOME/.rspec.
 
 I have a small script called link.sh that helps me creating the link on a per tool basis.
 
+A copy of the __git_ps1 at 
+
+curl -o ~/.git-prompt.sh \
+    https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
