@@ -20,3 +20,8 @@ A copy of the __git_ps1 at
 
 curl -o ~/.git-prompt.sh \
     https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+
+add to profile
+
+source ~/.git-prompt.sh
