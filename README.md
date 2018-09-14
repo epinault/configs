@@ -25,3 +25,8 @@ curl -o ~/.git-prompt.sh \
 add to profile
 
 source ~/.git-prompt.sh
+
+
+Solarized Theme for OSX
+
+https://github.com/tomislav/osx-terminal.app-colors-solarized
